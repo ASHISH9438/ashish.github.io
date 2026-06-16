@@ -1,220 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish Kumar | Lead Product Analyst</title>
+    <title>Ashish Kumar | Analytics Command Hub</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .grid-matrix {
+            background-image: radial-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        .dark .grid-matrix {
+            background-image: radial-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 0);
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen grid-matrix flex flex-col transition-colors duration-200">
 
-    <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white py-20 px-4 shadow-md">
-        <div class="max-w-5xl mx-auto text-center md:text-left md:flex md:justify-between md:items-center">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-900 px-4 md:px-8 py-3.5 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="h-9 w-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-sm shadow-md shadow-indigo-500/20">
+                <i class="fa-solid fa-chart-network"></i>
+            </div>
             <div>
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Ashish Kumar</h1>
-                <p class="text-xl md:text-2xl text-indigo-300 mt-2 font-medium">Lead Product Analyst</p>
-                <p class="text-slate-400 mt-1"><i class="fa-solid fa-location-dot mr-2"></i>Bengaluru, India</p>
+                <span class="font-extrabold text-slate-900 dark:text-white tracking-tight block text-sm">ASHISH_KUMAR_PORTFOLIO</span>
+                <span class="code-font text-xs text-indigo-600 dark:text-indigo-400 font-medium">v1.12.7 // Lead_Product_Analyst</span>
             </div>
-            <div class="mt-6 md:mt-0 flex flex-wrap justify-center gap-4 text-sm">
-                <a href="mailto:ashish.agrahari15@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-lg font-semibold transition-colors flex items-center gap-2 shadow-sm">
-                    <i class="fa-solid fa-envelope"></i> Email Me
-                </a>
-                <a href="https://bit.ly/3dKL6YU" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-5 py-2.5 rounded-lg font-semibold transition-colors flex items-center gap-2">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="tel:+919438814876" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-5 py-2.5 rounded-lg font-semibold transition-colors flex items-center gap-2">
-                    <i class="fa-solid fa-phone"></i> +91 9438814876
-                </a>
-            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <button id="themeToggle" class="h-9 w-9 bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 cursor-pointer transition-colors">
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+            <button onclick="window.print();" class="hidden sm:flex bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md shadow-indigo-600/10 items-center gap-2 cursor-pointer">
+                <i class="fa-solid fa-terminal text-[10px]"></i> RUN PRINT_DOSSIER
+            </button>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-12 space-y-16">
+    <main class="max-w-7xl w-full mx-auto p-4 md:p-8 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        <section id="summary" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-indigo-500 pb-2 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-user text-indigo-600"></i> Profile Summary
-            </h2>
-            <ul class="space-y-3 text-slate-600 leading-relaxed list-none pl-0">
-                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span><strong>12+ years of overall experience</strong> with about <strong>7+ years</strong> dedicated entirely to high-impact Analytics.</span></li>
-                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Specialized expertise in <strong>B2C & Quick-Commerce Supply Chain Product Analytics</strong> (Hub and Dark Store Operations).</span></li>
-                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Proven track record leading analytics teams, mentoring junior analysts, and managing core stakeholders.</span></li>
-                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Deep exposure to Big Data architectures, warehouse implementations, and real-time streaming data pipelines (BigQuery, Spark, Redshift, AWS Kinesis).</span></li>
-            </ul>
-        </section>
-
-        <section id="skills" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-indigo-500 pb-2 mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-screwdriver-wrench text-indigo-600"></i> Skills & Technical Arsenal
-            </h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div>
-                    <h3 class="font-bold text-indigo-950 mb-3 text-sm uppercase tracking-wider">Proficient Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">SQL</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">Python</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">PySpark</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">BigQuery</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">R</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">Excel</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">Metabase</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">NoSQL</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-indigo-950 mb-3 text-sm uppercase tracking-wider">Familiar Ecosystems</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">Tableau</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">AWS Kinesis</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">Firehose</span>
-                        <span class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium">Redshift</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-indigo-950 mb-3 text-sm uppercase tracking-wider">Core Domains</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-md text-sm font-medium">Product Analytics</span>
-                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-md text-sm font-medium">Supply Chain & Last Mile</span>
-                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-md text-sm font-medium">ETL Pipelines</span>
-                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-md text-sm font-medium">Funnel Optimization</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-indigo-500 pb-2 mb-8 flex items-center gap-2">
-                <i class="fa-solid fa-briefcase text-indigo-600"></i> Professional Experience
-            </h2>
+        <aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
             
-            <div class="relative border-l-2 border-slate-200 ml-4 space-y-12">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center gap-4">
+                    <div class="h-14 w-14 bg-gradient-to-tr from-indigo-600 to-violet-500 rounded-2xl flex items-center justify-center text-xl text-white shadow-lg">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Ashish Kumar</h1>
+                        <p class="text-xs code-font text-indigo-600 dark:text-indigo-400 font-semibold mt-0.5">@ashish9438</p>
+                    </div>
+                </div>
                 
-                <div class="relative pl-6">
-                    <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
-                    <div class="flex flex-wrap justify-between items-start gap-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Lead Product Analyst</h3>
-                            <p class="text-indigo-600 font-medium">Zepto</p>
-                        </div>
-                        <span class="bg-slate-100 text-slate-600 text-sm font-medium px-3 py-1 rounded-full">Jul 2022 - Present</span>
+                <div class="mt-6 space-y-3 text-xs border-t border-slate-100 dark:border-slate-800 pt-5">
+                    <div class="flex justify-between py-1 border-b border-slate-50 dark:border-slate-850/40">
+                        <span class="text-slate-400 font-medium">LOCATION</span>
+                        <span class="font-semibold text-slate-700 dark:text-slate-200">Bengaluru, India</span>
                     </div>
-                    <ul class="mt-3 space-y-2 text-slate-600 list-disc list-inside text-sm leading-relaxed">
-                        <li>Own supply chain metric strategies, building measurement frameworks for actuals vs. plan targets.</li>
-                        <li>Automate core data pipelines and dashboards to empower product feature rollouts and reduce manual processing overhead.</li>
-                        <li>Perform exploratory deep-dives and drop-off funnel analyses on loosely defined datasets to secure actionable operational insights.</li>
-                    </ul>
-                </div>
-
-                <div class="relative pl-6">
-                    <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
-                    <div class="flex flex-wrap justify-between items-start gap-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Sr. Product Analyst</h3>
-                            <p class="text-indigo-600 font-medium">Cardekho</p>
-                        </div>
-                        <span class="bg-slate-100 text-slate-600 text-sm font-medium px-3 py-1 rounded-full">Jul 2021 - Jul 2022</span>
+                    <div class="flex justify-between py-1 border-b border-slate-50 dark:border-slate-850/40">
+                        <span class="text-slate-400 font-medium">CONTACT_TEL</span>
+                        <a href="tel:+919438814876" class="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">+91-9438814876</a>
                     </div>
-                    <ul class="mt-3 space-y-2 text-slate-600 list-disc list-inside text-sm leading-relaxed">
-                        <li>Partnered with Product Managers to execute, track, and evaluate critical product metric frameworks and A/B test setups.</li>
-                        <li>Delivered user-journey analytics, analyzing severe drop-offs and validating instrumentation logs during feature rollouts.</li>
-                    </ul>
-                </div>
-
-                <div class="relative pl-6">
-                    <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
-                    <div class="flex flex-wrap justify-between items-start gap-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Sr. Data Analyst</h3>
-                            <p class="text-indigo-600 font-medium">Trell</p>
-                        </div>
-                        <span class="bg-slate-100 text-slate-600 text-sm font-medium px-3 py-1 rounded-full">Nov 2020 - Jul 2021</span>
+                    <div class="flex justify-between py-1 border-b border-slate-50 dark:border-slate-850/40">
+                        <span class="text-slate-400 font-medium">CONTACT_EMAIL</span>
+                        <a href="mailto:ashish.agrahari15@gmail.com" class="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline truncate ml-2">ashish.agrahari15@gmail.com</a>
                     </div>
-                    <ul class="mt-3 space-y-2 text-slate-600 list-disc list-inside text-sm leading-relaxed">
-                        <li>Architected validation, notification delivery, and tracking pipelines leveraging BigQuery and Python.</li>
-                        <li>Supplied business-critical user engagement analytics (CTR, session behavior) to senior leadership.</li>
-                    </ul>
-                </div>
-
-                <div class="relative pl-6">
-                    <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
-                    <div class="flex flex-wrap justify-between items-start gap-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Analytics Manager</h3>
-                            <p class="text-indigo-600 font-medium">Rentomojo</p>
-                        </div>
-                        <span class="bg-slate-100 text-slate-600 text-sm font-medium px-3 py-1 rounded-full">Sep 2018 - Nov 2020</span>
+                    <div class="flex justify-between py-1">
+                        <span class="text-slate-400 font-medium">LINKEDIN_URI</span>
+                        <a href="https://bit.ly/3dKL6YU" target="_blank" class="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">bit.ly/3dKL6YU <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5"></i></a>
                     </div>
-                    <ul class="mt-3 space-y-2 text-slate-600 list-disc list-inside text-sm leading-relaxed">
-                        <li>Built real-time analytics stream workloads using AWS Kinesis, Spark Structured Streaming, and Firehose into Redshift.</li>
-                        <li>Automated target IVR calls driving a 25% throughput hike for KYC operations; mitigated MRR churn by 2% via analytical models.</li>
-                    </ul>
                 </div>
-
-                <div class="relative pl-6">
-                    <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1.5 ring-4 ring-white"></div>
-                    <div class="flex flex-wrap justify-between items-start gap-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Operations & Project Scheduling Roles</h3>
-                            <p class="text-slate-500 font-medium">L&T Hydrocarbon Engineering | Zillion Infraprojects</p>
-                        </div>
-                        <span class="bg-slate-100 text-slate-600 text-sm font-medium px-3 py-1 rounded-full">Aug 2011 - Nov 2016</span>
-                    </div>
-                    <p class="mt-2 text-slate-600 text-sm">
-                        Successfully managed large-scale infrastructure resource layouts, site planning, operations matrix tracking, and cross-functional coordination.
-                    </p>
-                </div>
-
             </div>
-        </section>
 
-        <section id="education" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-indigo-500 pb-2 mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-graduation-cap text-indigo-600"></i> Education
-            </h2>
-            <div class="space-y-6">
-                <div class="flex flex-wrap justify-between items-start gap-2 border-l-4 border-indigo-500 pl-4">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 shadow-sm">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 code-font">// AGGREGATED_METRICS</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-100 dark:border-slate-850">
+                        <span class="text-2xl font-black text-slate-900 dark:text-white block">12+</span>
+                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wide">Total Years Exp</span>
+                    </div>
+                    <div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-100 dark:border-slate-850">
+                        <span class="text-2xl font-black text-indigo-600 dark:text-indigo-400 block">7+</span>
+                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wide">Analytics Specific</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 shadow-sm">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 code-font">// CORE_FUNCTIONAL_TAGS</h3>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">Data Analytics</span>
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">ETL Processes</span>
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">Data Warehousing</span>
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">Data Visualisation</span>
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">Real-Time Streaming</span>
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">Logistics Operations</span>
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">Product Analytics</span>
+                    <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-medium px-2.5 py-1 rounded-md">Supply Chain & Last Mile Ops</span>
+                </div>
+            </div>
+        </aside>
+
+        <div class="lg:col-span-8 space-y-6">
+            
+            <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-4 text-xs font-bold uppercase tracking-wider code-font">
+                    <span class="h-1.5 w-1.5 bg-indigo-500 rounded-full animate-pulse"></span> CONSOLE_PROFILE_SUMMARY
+                </div>
+                <div class="space-y-3.5 text-sm text-slate-600 dark:text-slate-400 leading-relaxed list-none pl-0">
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[01]</span> <span>Rich experience of overall 12+ years with about 7+ years of experience in Analytics.</span></div>
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[02]</span> <span>Experience in B2C & Quick-Commerce Supply Chain Product Analytics (DH & MH Operations).</span></div>
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[03]</span> <span>Experience in leading teams, guiding junior analysts, and fostering a collaborative work environment.</span></div>
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[04]</span> <span>Expertise in problem-solving and analysis of critical data used for Business Forecasting.</span></div>
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[05]</span> <span>Exposure to Big Data technologies like Big Query, Spark and building ETL pipelines.</span></div>
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[06]</span> <span>Experience in working with data warehouse implementations using Redshift.</span></div>
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[07]</span> <span>Exposure to Relational databases like PostgreSQL & Redshift, and NoSQL databases like MongoDB.</span></div>
+                    <div class="flex items-start gap-2.5"><span class="code-font text-indigo-500 font-bold select-none">[08]</span> <span>Experience in product management, client interactions and resource management activities.</span></div>
+                </div>
+            </section>
+
+            <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-6 text-xs font-bold uppercase tracking-wider code-font">
+                    <span class="h-1.5 w-1.5 bg-indigo-500 rounded-full"></span> TECHNOLOGY_COMPILER_STACK
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <h3 class="text-lg font-bold text-slate-900">MBA (BPGP - BA & AI)</h3>
-                        <p class="text-slate-600">Indian Institute of Management, Ahmedabad</p>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 code-font">&gt; PROFICIENT_TOOLS</h4>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-solid fa-table text-indigo-500 mr-2"></i>Excel</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-solid fa-database text-indigo-500 mr-2"></i>SQL</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-brands fa-r-project text-indigo-500 mr-2"></i>R</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-brands fa-python text-indigo-500 mr-2"></i>Python</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-solid fa-bolt text-indigo-500 mr-2"></i>PySpark</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-solid fa-chart-simple text-indigo-500 mr-2"></i>Metabase</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-solid fa-leaf text-indigo-500 mr-2"></i>NoSQL</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300"><i class="fa-solid fa-magnifying-glass-chart text-indigo-500 mr-2"></i>Big Query</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-700 dark:text-slate-300 col-span-2"><i class="fa-solid fa-cube text-indigo-500 mr-2"></i>MSTR</div>
+                        </div>
                     </div>
-                    <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full">Class of 2028</span>
-                </div>
-                <div class="flex flex-wrap justify-between items-start gap-2 border-l-4 border-slate-300 pl-4">
                     <div>
-                        <h3 class="text-lg font-bold text-slate-900">B.Tech. in Mechanical Engineering</h3>
-                        <p class="text-slate-600">Uttar Pradesh Technical University, Lucknow</p>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 code-font">&gt; FAMILIAR_ECOSYSTEMS</h4>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-600 dark:text-slate-400"><i class="fa-solid fa-chart-pie mr-2 text-slate-400"></i>Tableau</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-600 dark:text-slate-400"><i class="fa-solid fa-water mr-2 text-slate-400"></i>Kinesis</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-600 dark:text-slate-400"><i class="fa-solid fa-fire mr-2 text-slate-400"></i>Firehose</div>
+                            <div class="bg-slate-50 dark:bg-slate-950 p-2 rounded border border-slate-100 dark:border-slate-850 code-font text-slate-600 dark:text-slate-400"><i class="fa-solid fa-box-archive mr-2 text-slate-400"></i>Redshift</div>
+                        </div>
                     </div>
-                    <span class="bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-full">Graduated 2011</span>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="references" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-indigo-500 pb-2 mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-star text-indigo-600"></i> Professional References
-            </h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <p class="font-bold text-slate-900">Kaustabh Datta Chaudhury</p>
-                    <p class="text-sm text-indigo-600 mb-2">EM (Data Scientist), Zepto</p>
-                    <p class="text-xs text-slate-500"><i class="fa-solid fa-envelope mr-1"></i> kaustabh93@gmail.com</p>
-                    <p class="text-xs text-slate-500"><i class="fa-solid fa-phone mr-1"></i> +91 9038553403</p>
+            <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-8 text-xs font-bold uppercase tracking-wider code-font">
+                    <span class="h-1.5 w-1.5 bg-indigo-500 rounded-full"></span> TIMELINE_HISTORY_STREAMS
                 </div>
-                <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <p class="font-bold text-slate-900">Dharmesh Gandhi</p>
-                    <p class="text-sm text-indigo-600 mb-2">VP Product, Oportun</p>
-                    <p class="text-xs text-slate-500"><i class="fa-solid fa-envelope mr-1"></i> dharmesh.dgandhi@gmail.com</p>
-                    <p class="text-xs text-slate-500"><i class="fa-solid fa-phone mr-1"></i> +91 9972718856</p>
-                </div>
-            </div>
-        </section>
+                
+                <div class="relative border-l border-slate-200 dark:border-slate-800 ml-3 space-y-10">
+                    
+                    <div class="relative pl-7">
+                        <div class="absolute w-2.5 h-2.5 bg-indigo-500 rounded-full -left-[5px] top-1.5 ring-4 ring-white dark:ring-slate-900"></div>
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">Lead PRODUCT ANALYST</h3>
+                                <p class="text-xs code-font text-indigo-600 dark:text-indigo-400 font-medium">Zepto</p>
+                            </div>
+                            <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">Jul 2022 - Present</span>
+                        </div>
+                        <ul class="mt-3 space-y-2 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside leading-relaxed">
+                            <li>Establish strong relationships with key stakeholders of all Supply Chain relevant metrics to gain an understanding of their strategies, objectives, and tactics to develop and improve a comprehensive measurement plan.</li>
+                            <li>Managing the measurement and reporting of productivity initiatives across the Supply Chain for both actuals and planned.</li>
+                            <li>Continuously work on automating reporting and building process efficiencies to minimise manual analyses.</li>
+                            <li>Develop dashboards and define metrics that inform the success of the Product Team.</li>
+                            <li>Explore large, complex, and loosely defined datasets to create actionable insights.</li>
+                            <li>Responsible for different kinds of funnel analysis and key indicators for drop-offs.</li>
+                            <li>Responsible for ensuring that the proper data is incoming while product feature changes are being made.</li>
+                        </ul>
+                    </div>
 
+                    <div class="relative pl-7">
+                        <div class="absolute w-2.5 h-2.5 bg-slate-400 dark:bg-slate-700 rounded-full -left-[5px] top-1.5 ring-4 ring-white dark:ring-slate-900"></div>
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">Sr. Product Analyst</h3>
+                                <p class="text-xs code-font text-indigo-600 dark:text-indigo-400 font-medium">Cardekho</p>
+                            </div>
+                            <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">Jul 2021 - Jul 2022</span>
+                        </div>
+                        <ul class="mt-3 space-y-2 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside leading-relaxed">
+                            <li>Perform strategic and ad-hoc data work in support of Product Managers.</li>
+                            <li>Develop dashboards and define metrics that inform the success of the Product Team.</li>
+                            <li>Help design, execute and evaluate A/B tests to improve the user journey.</li>
+                            <li>Explore large, complex, and loosely defined datasets to create actionable insights.</li>
+                            <li>Responsible for different kinds of funnel analysis and key indicators for drop-offs.</li>
+                            <li>Responsible for ensuring the proper data is incoming while product feature changes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-7">
+                        <div class="absolute w-2.5 h-2.5 bg-slate-400 dark:bg-slate-700 rounded-full -left-[5px] top-1.5 ring-4 ring-white dark:ring-slate-900"></div>
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">Sr. Data Analyst</h3>
+                                <p class="text-xs code-font text-indigo-600 dark:text-indigo-400 font-medium">Trell</p>
+                            </div>
+                            <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">Nov 2020 – Jul 2021</span>
+                        </div>
+                        <ul class="mt-3 space-y-2 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside leading-relaxed">
+                            <li>Responsible for extraction, loading, transforming & validating data using Big Query and Python.</li>
+                            <li>Supplying qualitative and quantitative data to colleagues & different departments.</li>
+                            <li>Responsible for building various reporting pipelines for management and vertical heads using Big Query, Python, Redash and G-Sheets.</li>
+                            <li>Responsible for the analysis of different campaign performances of notification delivery and clicks.</li>
+                            <li>Tracking delivery %, CTR and session activities of user engagement on the app.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-7">
+                        <div class="absolute w-2.5 h-2.5 bg-slate-400 dark:bg-slate-700 rounded-full -left-[5px] top-1.5 ring-4 ring-white dark:ring-slate-900"></div>
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">Analytics Manager</h3>
+                                <p class="text-xs code-font text-indigo-600 dark:text-indigo-400 font-medium">rentomojo</p>
+                            </div>
+                            <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">Sep 2018 - Nov 2020</span>
+                        </div>
+                        <ul class="mt-3 space-y-2 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside leading-relaxed">
+                            <li>Created data pipelines required for various logistic processes to aid in the better operation of several teams by leveraging R, Python, PySpark, SQL, MongoDB, and REST APIs.</li>
+                            <li>Built a real-time analytics workload to crunch data about logistics & operations, using Kinesis, Spark Structured Streaming and Firehose as the ingestion, crunching and delivery streams, respectively, to Redshift.</li>
+                            <li>Responsible for extraction, loading, transforming & validating data using R, Python and PySpark.</li>
+                            <li>Automated IVR calling processes for the KYC team resulted in a <span class="text-emerald-500 font-semibold">25% increase</span> in cases handled.</li>
+                            <li>Analysed customer churn behaviour and built a dashboard resulting in a <span class="text-emerald-500 font-semibold">2% decrease</span> in churn rates in terms of MRR using SQL, R and Metabase.</li>
+                            <li>Built C-SAT Tracker to identify key business areas affecting customer experiences using R and Metabase.</li>
+                            <li>Built various reporting pipelines for management and vertical heads using SQL and Metabase.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-7">
+                        <div class="absolute w-2.5 h-2.5 bg-slate-300 dark:bg-slate-800 rounded-full -left-[5px] top-1.5 ring-4 ring-white dark:ring-slate-900"></div>
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">Sr. engineer</h3>
+                                <p class="text-xs code-font text-indigo-600 dark:text-indigo-400 font-medium">l&t Hydrocarbon engineering limited</p>
+                            </div>
+                            <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">Mar 2014 – Nov 2016</span>
+                        </div>
+                        <ul class="mt-3 space-y-2 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside leading-relaxed">
+                            <li>Managed project operations to ensure the timely accomplishment of targets within set parameters.</li>
+                            <li>Planned, controlled, and coordinated all site planning & scheduling activities as per project scope.</li>
+                            <li>Responsible for resource planning, analysis and forecasting of demands of various types of resources, including labour, material, and equipment.</li>
+                            <li>Ensured compliance with technical aspects of the work and fixed deviations.</li>
+                            <li>Conducted review meetings to identify and solve potential problems.</li>
+                            <li>Responsible for monitoring & tracking the daily progress of projects at the site and preparing DPR.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-7">
+                        <div class="absolute w-2.5 h-2.5 bg-slate-300 dark:bg-slate-800 rounded-full -left-[5px] top-1.5 ring-4 ring-white dark:ring-slate-900"></div>
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">engineer</h3>
+                                <p class="text-xs code-font text-indigo-600 dark:text-indigo-400 font-medium">Zillion infraprojects private limited</p>
+                            </div>
+                            <span class="bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">aug 2011 – mar 2014</span>
+                        </div>
+                        <ul class="mt-3 space-y-2 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside leading-relaxed">
+                            <li>Planned, controlled and coordinated all site planning & scheduling of project-related processes.</li>
+                            <li>Reviewed engineering package, piping design & drawing, piping layout, detailed inspection and construction work, and materials planning.</li>
+                            <li>Ensured compliance with the technical aspects of work and sorted out deviations.</li>
+                            <li>Analysed the subcontractors’ reports to keep track of the project’s progress.</li>
+                            <li>Coordinated with headquarters for procurement & proper arrangement of resources at the site.</li>
+                            <li>Conducted review meetings to identify and solve potential issues.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-6 text-xs font-bold uppercase tracking-wider code-font">
+                    <span class="h-1.5 w-1.5 bg-indigo-500 rounded-full"></span> HISTORICAL_EDUCATION_SCHEMAS
+                </div>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 flex flex-wrap justify-between items-center gap-4">
+                        <div>
+                            <span class="code-font text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block">COLLEGE_01</span>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">MBA (BPGP- BA&AI)</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Indian Institute of Management, Ahmedabad</p>
+                        </div>
+                        <span class="bg-indigo-50 dark:bg-indigo-950 border border-indigo-100 dark:border-indigo-900/60 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">Class of 2028</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 flex flex-wrap justify-between items-center gap-4">
+                        <div>
+                            <span class="code-font text-[10px] text-slate-400 font-bold block">COLLEGE_02</span>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">B.Tech. (Mechanical Engineering)</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Uttar Pradesh Technical University, Lucknow</p>
+                        </div>
+                        <span class="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-bold px-2.5 py-1 rounded-md code-font">Graduated 2011</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-6 text-xs font-bold uppercase tracking-wider code-font">
+                    <span class="h-1.5 w-1.5 bg-indigo-500 rounded-full"></span> INTEGRITY_REFERENCE_VERIFICATION
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 text-xs">
+                        <p class="font-bold text-slate-900 dark:text-white text-sm">Kaustabh Datta Chaudhury</p>
+                        <p class="text-indigo-600 dark:text-indigo-400 code-font text-[11px] font-medium mt-0.5">EM (Data Scientist), Zepto</p>
+                        <div class="mt-4 space-y-1 text-slate-500 dark:text-slate-400 code-font text-[11px]">
+                            <p><i class="fa-solid fa-envelope mr-1.5 w-4 text-center"></i>kaustabh93@gmail.com</p>
+                            <p><i class="fa-solid fa-phone mr-1.5 w-4 text-center"></i>(+91) 9038553403</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 text-xs">
+                        <p class="font-bold text-slate-900 dark:text-white text-sm">Dharmesh Gandhi</p>
+                        <p class="text-indigo-600 dark:text-indigo-400 code-font text-[11px] font-medium mt-0.5">VP Product, Oportun</p>
+                        <div class="mt-4 space-y-1 text-slate-500 dark:text-slate-400 code-font text-[11px]">
+                            <p><i class="fa-solid fa-envelope mr-1.5 w-4 text-center"></i>dharmesh.dgandhi@gmail.com</p>
+                            <p><i class="fa-solid fa-phone mr-1.5 w-4 text-center"></i>(+91) 9972718856</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 text-center py-6 text-sm border-t border-slate-800">
-        <p>&copy; 2026 Ashish Kumar. Powered by clean code & data algorithms.</p>
+    <footer class="bg-white dark:bg-slate-950 text-slate-400 dark:text-slate-600 text-center py-6 text-xs border-t border-slate-200 dark:border-slate-900 mt-12 code-font">
+        <p>SYSTEM_STATUS: SECURE // COMPILED_DATE: 2026-06-16 // &copy; ASHISH_KUMAR</p>
     </footer>
 
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-sun';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-moon';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Sync UI on cold load setup initialization
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.remove('dark');
+            themeIcon.className = 'fa-solid fa-sun';
+        } else {
+            htmlElement.classList.add('dark');
+            themeIcon.className = 'fa-solid fa-moon';
+        }
+    </script>
 </body>
 </html>
